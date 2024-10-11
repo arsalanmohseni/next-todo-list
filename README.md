@@ -4,11 +4,11 @@ A simple and elegant todo list application built with Next.js.
 
 ## Features
 
-* Add, edit, and delete tasks
-* Mark tasks as complete
-* Filter tasks by status (all, active, completed)
-* Responsive design for all devices
-* Built-in local storage for persistent data
+- Add, edit, and delete tasks
+- Mark tasks as complete
+- Filter tasks by status (all, active, completed)
+- Responsive design for all devices
+- Built-in local storage for persistent data
 
 ## Getting Started
 
@@ -31,4 +31,5 @@ A simple and elegant todo list application built with Next.js.
 ```
 
 ### Note
+
 For contiburting, read the [CONTRIBUTING.md](https://github.com/arsalanmohseni/next-todo-list/blob/main/CONTRIBUTING.md) file.
