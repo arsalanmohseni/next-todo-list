@@ -31,13 +31,13 @@ const page = () => {
                     onChange={(e) => setTodoname(e.target.value)} // Update todoname on input change
                 />
                 <button
-                    className="rounded-r-full bg-sky-400 p-3 font-bold text-white"
+                    className="rounded-r-full bg-blue-500 p-3 py-4 font-bold text-white"
                     onClick={addTodo} // Call addTodo function on click
                 >
                     Add
                 </button>
             </section>
-            <ul className="*:text-3xl *:text-left *:hover:line-through">
+            <ul className="*:text-left *:text-3xl *:hover:line-through">
                 {todos.map((todo) => (
                     <Todo key={todo}>{todo}</Todo>
                 ))}
