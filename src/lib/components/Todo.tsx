@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 
-interface TodoProps {
+interface Props {
     children: React.ReactNode;
 }
-const Todo: React.FC<TodoProps> = ({ children }) => {
+
+const Todo: React.FC<Props> = ({ children }) => {
     return (
         <li
             key={Math.random().toString(36).substring(2, 15)}
