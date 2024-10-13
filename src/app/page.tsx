@@ -2,22 +2,36 @@
 import { useState } from "react";
 import Todo from "../lib/components/Todo";
 
+interface Todos {
+    name: string;
+    id: string;
+}
+
 const page = () => {
     /*
         TODO: Create "Delete task" button
         TODO: Create "Mark as completed" button or when clicked a todo, set it to completed
     */
 
-    const [todos, setTodos] = useState<string[]>([]);
-    const [completedTodos, setCompletedTodos] = useState<string[]>([]);
+    const [todos, setTodos] = useState<Todos[]>([]);
     const [todoname, setTodoname] = useState<string>();
 
     const addTodo = () => {
         if (todoname) {
             // Update the todos state with the new todo
-            setTodos([...todos, todoname]);
+            setTodos([
+                ...todos,
+                {
+                    name: todoname,
+                    id: Math.random().toString(36).substring(2, 15),
+                },
+            ]);
             setTodoname(""); // Clear the input field after adding
         }
+    };
+
+    const removeTodo = (id: string) => {
+        setTodos(todos.filter((todo) => todo.id !== id));
     };
 
     return (
@@ -39,7 +53,9 @@ const page = () => {
             </section>
             <ul className="*:text-left *:text-3xl *:hover:line-through">
                 {todos.map((todo) => (
-                    <Todo key={todo}>{todo}</Todo>
+                    <li key={todo.id} onClick={() => removeTodo(todo.id)}>
+                        <Todo>{todo.name}</Todo>
+                    </li>
                 ))}
             </ul>
         </div>
