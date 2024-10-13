@@ -9,8 +9,7 @@ interface Todos {
 
 const page = () => {
     /*
-        TODO: Create "Delete task" button
-        TODO: Create "Mark as completed" button or when clicked a todo, set it to completed
+        TODO: Create "Mark as completed" button
     */
 
     const [todos, setTodos] = useState<Todos[]>([]);
