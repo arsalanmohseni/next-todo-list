@@ -50,7 +50,7 @@ const page = () => {
                     Add
                 </button>
             </section>
-            <ul className="*:text-left *:text-3xl *:hover:line-through">
+            <ul className="*:text-left *:text-3xl *:hover:*:line-through">
                 {todos.map((todo) => (
                     <li key={todo.id} onClick={() => removeTodo(todo.id)}>
                         <Todo>{todo.name}</Todo>
